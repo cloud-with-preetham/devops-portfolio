@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function GithubStats() {
   return (
     <section className="py-32">
@@ -10,10 +12,12 @@ export default function GithubStats() {
 
         <img
           src="https://github-readme-stats.vercel.app/api?username=cloud-with-preetham&show_icons=true&theme=dark"
+          alt="GitHub Stats"
         />
 
         <img
           src="https://github-readme-stats.vercel.app/api/top-langs/?username=cloud-with-preetham&layout=compact&theme=dark"
+          alt="Top Languages"
         />
 
       </div>
