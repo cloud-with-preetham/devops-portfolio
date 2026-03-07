@@ -1,36 +1,178 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cloud with Preetham - DevOps Portfolio
 
-## Getting Started
+[![Deploy to GitHub Pages](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/deploy.yml)
 
-First, run the development server:
+A modern, responsive DevOps portfolio website built with Next.js, featuring dark/light theme toggle and comprehensive sections showcasing skills, projects, and experience.
+
+🌐 **Live Demo:** [https://cloud-with-preetham.github.io/devops-portfolio](https://cloud-with-preetham.github.io/devops-portfolio)
+
+## ✨ Features
+
+- 🎨 **Dark/Light Theme Toggle** - Seamless theme switching with persistent preferences
+- 📱 **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
+- ⚡ **Modern Tech Stack** - Next.js 15, TypeScript, Tailwind CSS, Framer Motion
+- 🎭 **Smooth Animations** - Engaging transitions and micro-interactions
+- 🔧 **Comprehensive Sections:**
+  - Hero with profile cutout
+  - Floating tech cards with 3D effects
+  - About with journey timeline
+  - Achievements with animated counters
+  - Experience timeline
+  - Certifications showcase
+  - Skills with 30+ technologies
+  - Featured projects
+  - Blog articles
+  - Testimonials
+  - GitHub activity integration
+  - Contact form
+- 🚀 **Automated Deployment** - GitHub Actions workflow for GitHub Pages
+- 🎯 **SEO Optimized** - Meta tags, OpenGraph, Twitter cards
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** React Icons
+- **Particles:** @tsparticles/react
+- **Deployment:** GitHub Pages
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/cloud-with-preetham/devops-portfolio.git
+
+# Navigate to project directory
+cd devops-portfolio
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for automatic deployment to GitHub Pages:
 
-## Learn More
+1. Push to `main` branch
+2. GitHub Actions workflow automatically builds and deploys
+3. Site is live at `https://cloud-with-preetham.github.io/devops-portfolio`
 
-To learn more about Next.js, take a look at the following resources:
+### Manual Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Build for production
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Export static files
+npm run export
 
-## Deploy on Vercel
+# Deploy the 'out' folder to GitHub Pages
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+devops-portfolio/
+├── app/
+│   ├── layout.tsx          # Root layout with SEO metadata
+│   ├── page.tsx            # Main page with all sections
+│   ├── globals.css         # Global styles and theme variables
+│   └── not-found.tsx       # Custom 404 page
+├── components/
+│   ├── Hero.tsx            # Hero section with profile
+│   ├── ResponsiveNavbar.tsx # Navigation with theme toggle
+│   ├── Skills.tsx          # Skills showcase
+│   ├── Experience.tsx      # Experience timeline
+│   ├── Projects.tsx        # Featured projects
+│   ├── Blog.tsx            # Blog articles
+│   ├── Contact.tsx         # Contact form
+│   └── ...                 # Other components
+├── public/
+│   ├── without-background.png  # Profile cutout image
+│   └── .nojekyll          # GitHub Pages configuration
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Actions deployment
+└── next.config.ts          # Next.js configuration
+```
+
+## 🎨 Customization
+
+### Update Personal Information
+
+1. **Profile Image:** Replace `public/without-background.png`
+2. **Content:** Edit component files in `components/` folder
+3. **Colors:** Modify Tailwind classes or `globals.css`
+4. **GitHub Username:** Update in `GithubActivity.tsx`
+5. **Social Links:** Update in `Hero.tsx`, `Footer.tsx`
+
+### Theme Customization
+
+Edit CSS variables in `app/globals.css`:
+
+```css
+:root {
+  --bg-primary: #000000;
+  /* Add your custom colors */
+}
+
+.light {
+  --bg-primary: #ffffff;
+  /* Light theme colors */
+}
+```
+
+## 📝 Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
+
+## 🌟 Key Features Implemented
+
+- ✅ Dark/Light theme with localStorage persistence
+- ✅ Responsive navigation with mobile menu
+- ✅ Animated scroll progress bar
+- ✅ Active section highlighting in navbar
+- ✅ Smooth scroll animations with Framer Motion
+- ✅ Particle background with theme adaptation
+- ✅ Profile cutout with drop shadow
+- ✅ Gradient text and buttons
+- ✅ Glassmorphism UI elements
+- ✅ Custom scrollbar
+- ✅ SEO metadata and OpenGraph tags
+- ✅ GitHub Pages deployment workflow
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Preetham Pereira (Cloud with Preetham)**
+
+- YouTube: [@cloudwithpreetham](https://youtube.com/@cloudwithpreetham)
+- GitHub: [@cloud-with-preetham](https://github.com/cloud-with-preetham)
+- LinkedIn: [Preetham Pereira](https://linkedin.com/in/preetham-pereira)
+- Twitter: [@yourcloudguy\_](https://x.com/yourcloudguy_)
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Animated with [Framer Motion](https://www.framer.com/motion/)
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
+
+---
+
+⭐ Star this repo if you find it helpful!
