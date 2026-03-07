@@ -26,8 +26,8 @@ export default function Contact() {
   return (
     <section id="contact" className="py-32 px-6 relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent pointer-events-none"></div>
-      
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent pointer-events-none"></div>
+
       <div className="max-w-7xl mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -59,9 +59,9 @@ export default function Contact() {
             {/* Contact Details */}
             <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition space-y-4">
               <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
-              
+
               <a href="mailto:reachout.preetham@gmail.com" className="flex items-center gap-4 text-gray-300 hover:text-white transition group">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition">
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-red-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition">
                   <FaEnvelope className="text-xl text-red-400" />
                 </div>
                 <div>
@@ -71,7 +71,7 @@ export default function Contact() {
               </a>
 
               <div className="flex items-center gap-4 text-gray-300">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
                   <FaMapMarkerAlt className="text-xl text-blue-400" />
                 </div>
                 <div>
@@ -98,7 +98,7 @@ export default function Contact() {
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
                       whileHover={{ scale: 1.05, y: -5 }}
-                      className={`flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br ${social.color} hover:shadow-lg ${social.hoverColor} transition`}
+                      className={`flex items-center gap-3 p-4 rounded-xl bg-linear-to-br ${social.color} hover:shadow-lg ${social.hoverColor} transition`}
                     >
                       <Icon className="text-2xl text-white" />
                       <span className="font-semibold text-white">{social.name}</span>
@@ -135,7 +135,7 @@ export default function Contact() {
           >
             <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition">
               <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
@@ -177,7 +177,7 @@ export default function Contact() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition flex items-center justify-center gap-2"
+                  className="w-full px-8 py-4 bg-linear-to-r from-blue-500 to-purple-600 rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition flex items-center justify-center gap-2"
                 >
                   <FaEnvelope />
                   Send Message
