@@ -89,7 +89,7 @@ export default function Certifications() {
   return (
     <section id="certifications" className="py-32 px-6 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/5 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-green-500/5 to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <motion.div
@@ -116,7 +116,7 @@ export default function Certifications() {
                 className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition group relative overflow-hidden"
               >
                 {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
+                <div className={`absolute inset-0 bg-linear-to-br ${cert.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
 
                 {/* Verified badge */}
                 {cert.verified && (
@@ -131,7 +131,7 @@ export default function Certifications() {
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${cert.color} p-0.5`}
+                    className={`w-16 h-16 rounded-xl bg-linear-to-br ${cert.color} p-0.5`}
                   >
                     <div className="w-full h-full bg-black rounded-xl flex items-center justify-center">
                       <Icon className={`text-3xl ${cert.iconColor}`} />
@@ -181,7 +181,7 @@ export default function Certifications() {
                     href={cert.verifyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-linear-to-r from-blue-500 to-purple-600 rounded-lg text-white text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition"
                   >
                     <span>Verify Credential</span>
                     <FaExternalLinkAlt className="text-xs" />
