@@ -47,7 +47,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-32 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <motion.div
@@ -72,7 +72,7 @@ export default function About() {
             {/* Profile Image */}
             <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 text-center">
               <div className="relative w-48 h-48 mx-auto mb-6">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-pulse-glow"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-600 rounded-full animate-pulse-glow"></div>
                 <Image
                   src="/profile.jpg"
                   alt="Preetham Pereira"
@@ -86,7 +86,7 @@ export default function About() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold flex items-center gap-2 mx-auto hover:shadow-lg hover:shadow-purple-500/50 transition"
+                className="px-6 py-3 bg-linear-to-r from-blue-500 to-purple-600 rounded-xl font-semibold flex items-center gap-2 mx-auto hover:shadow-lg hover:shadow-purple-500/50 transition"
               >
                 <FaDownload /> Download Resume
               </motion.button>
@@ -122,7 +122,7 @@ export default function About() {
             viewport={{ once: true }}
             className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8"
           >
-            <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold mb-6 bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Hello! I&apos;m Preetham 👋
             </h3>
             <div className="space-y-4 text-gray-300 leading-relaxed">
@@ -149,7 +149,7 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h3 className="text-3xl font-bold text-center mb-12 bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             My Journey
           </h3>
           <div className="grid md:grid-cols-4 gap-6">
@@ -163,7 +163,7 @@ export default function About() {
                 whileHover={{ y: -10 }}
                 className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition relative"
               >
-                <div className="absolute -top-4 left-6 px-4 py-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full">
+                <div className="absolute -top-4 left-6 px-4 py-1 bg-linear-to-r from-blue-500 to-purple-600 rounded-full">
                   <span className="text-sm font-bold">{milestone.year}</span>
                 </div>
                 <div className="mt-4">
@@ -182,7 +182,7 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h3 className="text-3xl font-bold text-center mb-12 bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Core Values
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -198,7 +198,7 @@ export default function About() {
                   whileHover={{ y: -10, scale: 1.05 }}
                   className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition text-center group"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-transform">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-linear-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-transform">
                     <Icon className="text-3xl text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-white mb-3">{value.title}</h4>
@@ -216,7 +216,7 @@ export default function About() {
           viewport={{ once: true }}
           className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8"
         >
-          <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h3 className="text-2xl font-bold mb-6 text-center bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Beyond DevOps
           </h3>
           <div className="grid md:grid-cols-3 gap-6 text-center">
