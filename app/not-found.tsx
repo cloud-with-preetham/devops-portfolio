@@ -14,7 +14,7 @@ export default function NotFound() {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
+          <h1 className="text-9xl font-bold text-transparent bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text">
             404
           </h1>
         </motion.div>
@@ -45,7 +45,7 @@ export default function NotFound() {
         >
           <Link
             href="/"
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition"
+            className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition"
           >
             <FaHome /> Go Home
           </Link>
