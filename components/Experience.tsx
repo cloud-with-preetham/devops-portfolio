@@ -86,7 +86,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-32 px-6 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative">
         <motion.div
@@ -102,7 +102,7 @@ export default function Experience() {
         <div className="relative">
           {/* Animated Dotted Timeline line */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 transform md:-translate-x-1/2 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500" style={{ 
+            <div className="absolute inset-0 bg-linear-to-b from-blue-500 via-purple-500 to-pink-500" style={{
               backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 10px, currentColor 10px, currentColor 20px)',
               animation: 'flow 3s linear infinite'
             }}></div>
@@ -128,7 +128,7 @@ export default function Experience() {
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                className="absolute left-6 md:left-1/2 top-8 w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 border-4 border-black transform md:-translate-x-1/2 z-10"
+                className="absolute left-6 md:left-1/2 top-8 w-6 h-6 rounded-full bg-linear-to-r from-blue-500 to-purple-500 border-4 border-black transform md:-translate-x-1/2 z-10"
               >
                 <div className="absolute inset-0 rounded-full bg-blue-500 animate-ping opacity-75"></div>
               </motion.div>
@@ -220,7 +220,7 @@ export default function Experience() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
-                      className="text-center p-3 bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-white/10 rounded-xl"
+                      className="text-center p-3 bg-linear-to-br from-blue-500/10 to-purple-500/10 border border-white/10 rounded-xl"
                     >
                       <p className="text-xl font-bold text-white mb-1">{metric.value}</p>
                       <p className="text-xs text-gray-400">{metric.label}</p>
