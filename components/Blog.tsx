@@ -64,7 +64,7 @@ export default function Blog() {
 
   return (
     <section id="blog" className="py-32 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <motion.div
@@ -88,7 +88,7 @@ export default function Blog() {
             <div className="grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className={`px-4 py-1 bg-gradient-to-r ${categoryColors[featuredArticle.category as keyof typeof categoryColors]} rounded-full text-xs font-semibold`}>
+                  <span className={`px-4 py-1 bg-linear-to-r ${categoryColors[featuredArticle.category as keyof typeof categoryColors]} rounded-full text-xs font-semibold`}>
                     {featuredArticle.category}
                   </span>
                   <span className="px-3 py-1 bg-yellow-500/20 border border-yellow-500/50 rounded-full text-xs text-yellow-400 font-semibold">
@@ -96,7 +96,7 @@ export default function Blog() {
                   </span>
                 </div>
 
-                <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition">
+                <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition">
                   {featuredArticle.title}
                 </h3>
 
@@ -126,14 +126,14 @@ export default function Blog() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition"
+                  className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-500 to-purple-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition"
                 >
                   Read Full Article <FaArrowRight />
                 </motion.button>
               </div>
 
               <div className="flex items-center justify-center">
-                <div className="w-full h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl border border-white/10 flex items-center justify-center">
+                <div className="w-full h-80 bg-linear-to-br from-blue-500/20 to-purple-500/20 rounded-2xl border border-white/10 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-6xl mb-4">📚</div>
                     <p className="text-gray-400 text-sm">Article Preview</p>
@@ -156,11 +156,11 @@ export default function Blog() {
               whileHover={{ y: -10 }}
               className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition group cursor-pointer"
             >
-              <span className={`inline-block px-3 py-1 bg-gradient-to-r ${categoryColors[article.category as keyof typeof categoryColors]} rounded-full text-xs font-semibold mb-4`}>
+              <span className={`inline-block px-3 py-1 bg-linear-to-r ${categoryColors[article.category as keyof typeof categoryColors]} rounded-full text-xs font-semibold mb-4`}>
                 {article.category}
               </span>
 
-              <h3 className="text-lg font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition line-clamp-2">
+              <h3 className="text-lg font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition line-clamp-2">
                 {article.title}
               </h3>
 
