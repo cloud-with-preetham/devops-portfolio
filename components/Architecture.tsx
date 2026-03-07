@@ -8,81 +8,81 @@ import { MdBuild, MdCloudUpload, MdSettings } from "react-icons/md";
 
 export default function Architecture() {
   const pipeline = [
-    { 
-      step: "Developer Push", 
-      IconComponent: VscGitPullRequest, 
+    {
+      step: "Developer Push",
+      IconComponent: VscGitPullRequest,
       color: "from-blue-500 to-cyan-500",
       description: "Code commit & push"
     },
-    { 
-      step: "GitHub Repository", 
-      IconComponent: FaGithub, 
+    {
+      step: "GitHub Repository",
+      IconComponent: FaGithub,
       color: "from-gray-400 to-gray-600",
       description: "Version control"
     },
-    { 
-      step: "GitHub Actions CI/CD", 
-      IconComponent: SiGithubactions, 
+    {
+      step: "GitHub Actions CI/CD",
+      IconComponent: SiGithubactions,
       color: "from-blue-600 to-purple-600",
       description: "Automated workflow"
     },
-    { 
-      step: "Run Tests", 
-      IconComponent: VscChecklist, 
+    {
+      step: "Run Tests",
+      IconComponent: VscChecklist,
       color: "from-green-500 to-teal-500",
       description: "Unit & integration tests"
     },
-    { 
-      step: "Build Application", 
-      IconComponent: MdBuild, 
+    {
+      step: "Build Application",
+      IconComponent: MdBuild,
       color: "from-orange-500 to-yellow-500",
       description: "Compile & bundle"
     },
-    { 
-      step: "Docker Image Build", 
-      IconComponent: FaDocker, 
+    {
+      step: "Docker Image Build",
+      IconComponent: FaDocker,
       color: "from-blue-400 to-cyan-400",
       description: "Containerization"
     },
-    { 
-      step: "Push to Docker Registry", 
-      IconComponent: MdCloudUpload, 
+    {
+      step: "Push to Docker Registry",
+      IconComponent: MdCloudUpload,
       color: "from-purple-500 to-pink-500",
       description: "Image repository"
     },
-    { 
-      step: "Deploy to AWS EC2", 
-      IconComponent: FaAws, 
+    {
+      step: "Deploy to AWS EC2",
+      IconComponent: FaAws,
       color: "from-orange-400 to-yellow-400",
       description: "Cloud deployment"
     },
-    { 
-      step: "Configure Infrastructure", 
-      IconComponent: SiTerraform, 
+    {
+      step: "Configure Infrastructure",
+      IconComponent: SiTerraform,
       color: "from-purple-400 to-pink-400",
       description: "IaC provisioning"
     },
-    { 
-      step: "NGINX Reverse Proxy", 
-      IconComponent: SiNginx, 
+    {
+      step: "NGINX Reverse Proxy",
+      IconComponent: SiNginx,
       color: "from-green-600 to-teal-600",
       description: "Load balancing"
     },
-    { 
-      step: "Application Running", 
-      IconComponent: FaRocket, 
+    {
+      step: "Application Running",
+      IconComponent: FaRocket,
       color: "from-blue-500 to-purple-500",
       description: "Live production"
     },
-    { 
-      step: "Monitoring (Prometheus)", 
-      IconComponent: SiPrometheus, 
+    {
+      step: "Monitoring (Prometheus)",
+      IconComponent: SiPrometheus,
       color: "from-orange-500 to-red-500",
       description: "Metrics collection"
     },
-    { 
-      step: "Visualization (Grafana)", 
-      IconComponent: SiGrafana, 
+    {
+      step: "Visualization (Grafana)",
+      IconComponent: SiGrafana,
       color: "from-orange-400 to-yellow-500",
       description: "Dashboard & alerts"
     },
@@ -133,7 +133,7 @@ export default function Architecture() {
 
                     <div className="flex items-center gap-6 pl-8">
                       {/* Icon */}
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <div className={`w-16 h-16 rounded-xl bg-linear-to-br ${item.color} flex items-center justify-center shadow-lg`}>
                           <Icon className="text-3xl text-white" />
                         </div>
@@ -148,7 +148,7 @@ export default function Architecture() {
                       </div>
 
                       {/* Status Indicator */}
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <motion.div
                           animate={{ scale: [1, 1.2, 1] }}
                           transition={{ duration: 2, repeat: Infinity }}
