@@ -102,8 +102,8 @@ export default function Experience() {
         <div className="relative">
           {/* Animated Dotted Timeline line */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 transform md:-translate-x-1/2 overflow-hidden">
-            <div className="absolute inset-0 bg-linear-to-b from-blue-500 via-purple-500 to-pink-500" style={{
-              backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 10px, currentColor 10px, currentColor 20px)',
+            <div className="absolute inset-0 bg-linear-to-b from-blue-500 via-purple-500 to-pink-500 opacity-50" style={{
+              backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(139, 92, 246, 0.8) 10px, rgba(139, 92, 246, 0.8) 20px)',
               animation: 'flow 3s linear infinite'
             }}></div>
           </div>
