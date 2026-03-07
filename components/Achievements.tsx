@@ -31,37 +31,37 @@ export default function Achievements() {
   }, []);
 
   const mainMetrics = [
-    { 
-      icon: FaRocket, 
-      value: `${counters.deployments}+`, 
-      label: "Successful Deployments", 
+    {
+      icon: FaRocket,
+      value: `${counters.deployments}+`,
+      label: "Successful Deployments",
       color: "from-blue-500 to-cyan-500",
       iconColor: "text-blue-400",
       description: "Zero-downtime deployments across production",
       trend: "+25%"
     },
-    { 
-      icon: FaServer, 
-      value: `${counters.uptime}%`, 
-      label: "System Uptime", 
+    {
+      icon: FaServer,
+      value: `${counters.uptime}%`,
+      label: "System Uptime",
       color: "from-green-500 to-emerald-500",
       iconColor: "text-green-400",
       description: "Maintained across all critical services",
       trend: "+0.5%"
     },
-    { 
-      icon: FaClock, 
-      value: `${counters.speed}%`, 
-      label: "Faster Deployments", 
+    {
+      icon: FaClock,
+      value: `${counters.speed}%`,
+      label: "Faster Deployments",
       color: "from-purple-500 to-pink-500",
       iconColor: "text-purple-400",
       description: "Reduced from 2 hours to 36 minutes",
       trend: "+70%"
     },
-    { 
-      icon: FaDollarSign, 
-      value: `${counters.cost}%`, 
-      label: "Cost Reduction", 
+    {
+      icon: FaDollarSign,
+      value: `${counters.cost}%`,
+      label: "Cost Reduction",
       color: "from-orange-500 to-red-500",
       iconColor: "text-orange-400",
       description: "Annual infrastructure savings of $200K+",
@@ -110,7 +110,7 @@ export default function Achievements() {
   return (
     <section id="achievements" className="py-32 px-6 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-orange-500/5 to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <motion.div
@@ -138,7 +138,7 @@ export default function Achievements() {
                 className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition group relative overflow-hidden"
               >
                 {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${metric.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
+                <div className={`absolute inset-0 bg-linear-to-br ${metric.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
 
                 {/* Trend badge */}
                 <div className="absolute top-4 right-4 px-2 py-1 bg-green-500/20 border border-green-500/30 rounded-full">
@@ -150,7 +150,7 @@ export default function Achievements() {
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.6 }}
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${metric.color} p-0.5 mb-4`}
+                    className={`w-14 h-14 rounded-xl bg-linear-to-br ${metric.color} p-0.5 mb-4`}
                   >
                     <div className="w-full h-full bg-black rounded-xl flex items-center justify-center">
                       <Icon className={`text-2xl ${metric.iconColor}`} />
@@ -159,10 +159,10 @@ export default function Achievements() {
 
                   {/* Value */}
                   <div className="text-4xl font-bold text-white mb-2">{metric.value}</div>
-                  
+
                   {/* Label */}
                   <div className="text-sm font-semibold text-gray-300 mb-2">{metric.label}</div>
-                  
+
                   {/* Description */}
                   <div className="text-xs text-gray-500">{metric.description}</div>
                 </div>
@@ -193,7 +193,7 @@ export default function Achievements() {
                   className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition"
                 >
                   <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${achievement.color} p-0.5 flex-shrink-0`}>
+                    <div className={`w-12 h-12 rounded-lg bg-linear-to-br ${achievement.color} p-0.5 shrink-0`}>
                       <div className="w-full h-full bg-black rounded-lg flex items-center justify-center">
                         <Icon className="text-xl text-white" />
                       </div>
@@ -240,7 +240,7 @@ export default function Achievements() {
                     whileInView={{ width: `${metric.current || parseInt(metric.value)}%` }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 + 0.3, duration: 1 }}
-                    className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
+                    className="h-full bg-linear-to-r from-blue-500 to-purple-600 rounded-full"
                   />
                 </div>
               </motion.div>
@@ -255,7 +255,7 @@ export default function Achievements() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full">
             <FaAward className="text-2xl text-yellow-400" />
             <span className="text-white font-semibold">Top Performer Award 2024</span>
           </div>
