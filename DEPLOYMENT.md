@@ -1,77 +1,157 @@
-# DevOps Portfolio - Preetham Pereira
+# Deployment Guide
 
-A modern, responsive portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+## GitHub Pages Deployment
 
-## 🚀 Features
+### Automatic Deployment (Recommended)
 
-- ✨ Modern UI/UX with glassmorphism design
-- 🌓 Dark/Light theme toggle
-- 📱 Fully responsive
-- ⚡ Optimized performance
-- 🎨 Smooth animations
-- 📊 GitHub activity integration
-- 🔍 SEO optimized
+The portfolio is configured for automatic deployment via GitHub Actions.
 
-## 🛠️ Tech Stack
+**Steps:**
+1. Push code to `main` branch
+2. GitHub Actions automatically triggers
+3. Site builds and deploys to GitHub Pages
+4. Live at: `https://portfolio.cloud-with-preetham.liveblog365.com`
 
-- **Framework:** Next.js 16
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **Icons:** React Icons
-- **Deployment:** GitHub Pages
+**Workflow File:** `.github/workflows/deploy.yml`
 
-## 📦 Installation
+### Custom Domain Setup
 
-```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
-```
-
-## 🌐 Deployment
-
-### GitHub Pages (Automated)
-
-1. Push to `main` branch
-2. GitHub Actions will automatically build and deploy
-3. Enable GitHub Pages in repository settings:
-   - Settings → Pages → Source: GitHub Actions
+1. **Add CNAME file:** Already configured in `public/CNAME`
+2. **GitHub Settings:**
+   - Go to repo Settings → Pages
+   - Set custom domain: `portfolio.cloud-with-preetham.liveblog365.com`
+   - Enable "Enforce HTTPS"
+3. **DNS Configuration:**
+   - Add CNAME record: `portfolio.cloud-with-preetham.liveblog365.com` → `cloud-with-preetham.github.io`
+   - Wait for DNS propagation (5-30 minutes)
 
 ### Manual Deployment
 
 ```bash
-# Build the project
+# 1. Build the project
 npm run build
 
-# The static files will be in the 'out' folder
-# Deploy the 'out' folder to any static hosting service
+# 2. Export static files
+npm run export
+
+# 3. The 'out' folder contains your static site
+# Deploy this folder to GitHub Pages or any static host
 ```
 
-## 📝 Customization
+## Configuration Files
 
-Update the following files with your information:
+### next.config.ts
+```typescript
+output: 'export'           // Enable static export
+images: { unoptimized: true }  // Required for static export
+// No basePath needed for custom domain
+```
 
-- `components/Hero.tsx` - Name, title, description
-- `components/About.tsx` - Bio, experience, journey
-- `components/Experience.tsx` - Work history
-- `components/Projects.tsx` - Your projects
-- `components/Skills.tsx` - Your skills
-- `components/Certifications.tsx` - Your certifications
-- `components/Contact.tsx` - Contact information
-- `public/profile.jpg` - Your profile photo
+### CNAME
+- Located in `public/CNAME`
+- Contains: `portfolio.cloud-with-preetham.liveblog365.com`
+- Required for custom domain on GitHub Pages
 
-## 🔗 Links
+### .nojekyll
+- Located in `public/.nojekyll`
+- Prevents GitHub Pages from using Jekyll
+- Ensures `_next/` folder is not ignored
 
-- **GitHub:** [cloud-with-preetham](https://github.com/cloud-with-preetham)
-- **LinkedIn:** [preetham-pereira](https://linkedin.com/in/preetham-pereira)
-- **Twitter:** [@yourcloudguy_](https://x.com/yourcloudguy_)
+## Environment Setup
 
-## 📄 License
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+- Git
 
-© 2025 Preetham Pereira. All rights reserved.
+### Installation
+```bash
+npm install
+```
+
+### Development
+```bash
+npm run dev
+# Open http://localhost:3000
+```
+
+### Production Build
+```bash
+npm run build
+npm run start
+```
+
+## Deployment Checklist
+
+- [ ] Update personal information in components
+- [ ] Replace profile image (`public/without-background.png`)
+- [ ] Update GitHub username in `GithubActivity.tsx`
+- [ ] Update social links in `Hero.tsx` and `Footer.tsx`
+- [ ] Test dark/light theme toggle
+- [ ] Test responsive design on mobile/tablet
+- [ ] Verify all links work
+- [ ] Check SEO metadata in `app/layout.tsx`
+- [ ] Test build locally: `npm run build && npm run start`
+- [ ] Push to GitHub and verify deployment
+
+## Troubleshooting
+
+### Build Fails
+- Check Node.js version (18+)
+- Clear cache: `rm -rf .next out node_modules && npm install`
+- Check for TypeScript errors: `npm run lint`
+
+### Styles Not Loading
+- Ensure `.nojekyll` exists in `public/` folder
+- Check custom domain DNS configuration
+
+### Images Not Displaying
+- Verify `images: { unoptimized: true }` in `next.config.ts`
+- Check image paths start with `/` (e.g., `/profile.jpg`)
+
+### Theme Not Persisting
+- Check browser localStorage is enabled
+- Verify theme script in `app/layout.tsx`
+
+## Alternative Hosting (Optional)
+
+While this portfolio is optimized for GitHub Pages, you can deploy elsewhere:
+
+### Netlify
+1. Connect GitHub repo
+2. Build command: `npm run build`
+3. Publish directory: `out`
+
+### Custom Server
+```bash
+# Build static files
+npm run build
+
+# Upload 'out' folder to your server
+# Configure web server to serve static files
+```
+
+## Performance Optimization
+
+- ✅ Static export for fast loading
+- ✅ Image optimization disabled (required for static export)
+- ✅ Code splitting with Next.js
+- ✅ Lazy loading with Framer Motion
+- ✅ Minimal dependencies
+
+## Security
+
+- ✅ No API keys in frontend code
+- ✅ Static site (no server vulnerabilities)
+- ✅ HTTPS via GitHub Pages
+- ✅ No sensitive data exposure
+
+## Monitoring
+
+- GitHub Actions build status badge in README
+- Check deployment logs in GitHub Actions tab
+- Monitor site performance with Lighthouse
+
+---
+
+**Need Help?** Open an issue on GitHub or contact via social links in portfolio.
