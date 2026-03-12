@@ -2,10 +2,11 @@
 
 ![CI](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/pipeline.yml/badge.svg)
 ![Deploy](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/deploy-to-server.yml/badge.svg)
-![Deploy](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/deploy-to-server.yml/badge.svg)
+![CodeQL](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/sast-scan.yml/badge.svg)
 ![Dependency Scan](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/dependency-scan.yml/badge.svg)
-![Dependency Scan](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/dependency-scan.yml/badge.svg)
+![Secret Scan](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/secret-scan.yml/badge.svg)
 ![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/cloud-with-preetham/devops-portfolio/badge)
+
 ![Stars](https://img.shields.io/github/stars/cloud-with-preetham/devops-portfolio?style=social)
 ![Forks](https://img.shields.io/github/forks/cloud-with-preetham/devops-portfolio?style=social)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs)
