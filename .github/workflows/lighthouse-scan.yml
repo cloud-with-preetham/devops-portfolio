@@ -10,27 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Setup Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build site
-        run: npm run build
-
-      - name: Serve static site
-        run: |
-          npm install -g serve
-          serve out -l 3000 &
-
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
-            http://localhost:3000
+            ${{ secrets.SITE_URL }}
           uploadArtifacts: true
           temporaryPublicStorage: true
