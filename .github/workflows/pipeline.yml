@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
   security-events: write
-
+  id-token: write
 jobs:
 
   secret_scan:
