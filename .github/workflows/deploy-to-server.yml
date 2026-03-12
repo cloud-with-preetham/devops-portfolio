@@ -4,9 +4,9 @@ on:
   workflow_call:
 
 permissions:
+  contents: read
   pages: write
   id-token: write
-  contents: read
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: out
+          path: site
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
