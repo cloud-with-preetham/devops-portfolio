@@ -1,6 +1,19 @@
 # Cloud with Preetham - DevOps Portfolio
 
-[![Deploy to GitHub Pages](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/deploy.yml)
+![CI](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/pipeline.yml/badge.svg)
+![Deploy](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/deploy-to-server.yml/badge.svg)
+![Deploy](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/deploy-to-server.yml/badge.svg)
+![Dependency Scan](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/dependency-scan.yml/badge.svg)
+![Dependency Scan](https://github.com/cloud-with-preetham/devops-portfolio/actions/workflows/dependency-scan.yml/badge.svg)
+![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/cloud-with-preetham/devops-portfolio/badge)
+![Stars](https://img.shields.io/github/stars/cloud-with-preetham/devops-portfolio?style=social)
+![Forks](https://img.shields.io/github/forks/cloud-with-preetham/devops-portfolio?style=social)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
+![DevSecOps](https://img.shields.io/badge/DevSecOps-Pipeline-blue)
+
+[![Live Site](https://img.shields.io/badge/Live-Portfolio-success)](https://portfolio.cloud-with-preetham.liveblog365.com)
 
 A modern, responsive DevOps portfolio website built with Next.js, featuring dark/light theme toggle and comprehensive sections showcasing skills, projects, and experience.
 
