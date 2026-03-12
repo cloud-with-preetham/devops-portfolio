@@ -9,6 +9,8 @@ permissions:
   contents: read
   security-events: write
   id-token: write
+  pages: write
+  
 jobs:
 
   secret_scan:
