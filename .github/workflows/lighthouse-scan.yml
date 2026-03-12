@@ -15,6 +15,6 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
-            ${{ secrets.SITE_URL }}
+            ${{ vars.SITE_URL }}
           uploadArtifacts: true
           temporaryPublicStorage: true
