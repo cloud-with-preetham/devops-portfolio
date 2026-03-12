@@ -22,10 +22,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload site artifact
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./out
+          path: out
 
       - name: Deploy to GitHub Pages
         id: deployment
