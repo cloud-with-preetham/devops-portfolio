@@ -1,0 +1,40 @@
+name: DevSecOps Portfolio Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  secret_scan:
+    uses: ./.github/workflows/secret-scan.yml
+
+  sast_scan:
+    uses: ./.github/workflows/sast-scan.yml
+
+  dependency_scan:
+    uses: ./.github/workflows/dependency-scan.yml
+
+  sbom_scan:
+    uses: ./.github/workflows/sbom-scan.yml
+
+  scorecard_scan:
+    uses: ./.github/workflows/security-scorecard.yml
+
+  build:
+    needs:
+      - secret_scan
+      - sast_scan
+      - dependency_scan
+      - sbom_scan
+      - scorecard_scan
+    uses: ./.github/workflows/build-site.yml
+
+  lighthouse_test:
+    needs: build
+    uses: ./.github/workflows/lighthouse-scan.yml
+
+  deploy:
+    needs: lighthouse_test
+    uses: ./.github/workflows/deploy-to-server.yml
