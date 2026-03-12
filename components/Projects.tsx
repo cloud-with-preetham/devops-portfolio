@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaAws, FaDocker, FaRocket, FaUsers, FaClock } from "react-icons/fa";
-import { SiKubernetes, SiTerraform, SiPython, SiJenkins } from "react-icons/si";
+import { FaGithub, FaExternalLinkAlt, FaAws, FaDocker, FaRocket, FaUsers, FaClock, FaReact } from "react-icons/fa";
+import { SiKubernetes, SiTerraform, SiPython, SiJenkins, SiNextdotjs } from "react-icons/si";
 
 export default function Projects() {
   const featuredProject = {
@@ -25,6 +25,13 @@ export default function Projects() {
   };
 
   const projects = [
+    {
+      title: "DevOps Portfolio Website",
+      description: "Modern, responsive portfolio built with Next.js featuring dark/light theme, automated CI/CD deployment to GitHub Pages with custom domain.",
+      tech: [{ icon: FaReact, color: "text-cyan-400" }, { icon: SiNextdotjs, color: "text-white" }, { icon: FaGithub, color: "text-gray-300" }],
+      metrics: { tech: "Next.js", deployment: "GitHub Pages" },
+      status: "Production",
+    },
     {
       title: "Automated CI/CD Pipeline",
       description: "Multi-stage pipeline with automated testing, security scanning, and deployment to multiple environments.",
