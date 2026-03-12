@@ -10,7 +10,7 @@ permissions:
   security-events: write
   id-token: write
   pages: write
-  
+
 jobs:
 
   secret_scan:
@@ -42,5 +42,7 @@ jobs:
     uses: ./.github/workflows/lighthouse-scan.yml
 
   deploy:
-    needs: lighthouse_test
+    needs:
+    - build
+    - lighthouse_test
     uses: ./.github/workflows/deploy-to-server.yml
