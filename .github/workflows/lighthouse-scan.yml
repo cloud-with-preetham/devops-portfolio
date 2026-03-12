@@ -22,9 +22,6 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
-      - name: Export Static Site
-        run: npm run export
-
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
