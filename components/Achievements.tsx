@@ -1,18 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaRocket, FaServer, FaClock, FaDollarSign, FaUsers, FaChartLine, FaAward, FaTrophy, FaFire, FaShieldAlt } from "react-icons/fa";
+import {
+  FaRocket,
+  FaServer,
+  FaClock,
+  FaDollarSign,
+  FaUsers,
+  FaChartLine,
+  FaAward,
+  FaTrophy,
+  FaFire,
+  FaShieldAlt,
+} from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 export default function Achievements() {
-  const [counters, setCounters] = useState({ deployments: 0, uptime: 0, speed: 0, cost: 0 });
+  const [counters, setCounters] = useState({
+    deployments: 0,
+    uptime: 0,
+    speed: 0,
+    cost: 0,
+  });
 
   useEffect(() => {
     const duration = 2000;
     const steps = 60;
     const interval = duration / steps;
 
-    const targets = { deployments: 500, uptime: 99.9, speed: 70, cost: 40 };
+    const targets = { deployments: 50, uptime: 69.9, speed: 50, cost: 30 };
     let step = 0;
 
     const timer = setInterval(() => {
@@ -21,7 +37,7 @@ export default function Achievements() {
         deployments: Math.floor((targets.deployments / steps) * step),
         uptime: parseFloat(((targets.uptime / steps) * step).toFixed(1)),
         speed: Math.floor((targets.speed / steps) * step),
-        cost: Math.floor((targets.cost / steps) * step)
+        cost: Math.floor((targets.cost / steps) * step),
       });
 
       if (step >= steps) clearInterval(timer);
@@ -38,7 +54,7 @@ export default function Achievements() {
       color: "from-blue-500 to-cyan-500",
       iconColor: "text-blue-400",
       description: "Zero-downtime deployments across production",
-      trend: "+25%"
+      trend: "+10%",
     },
     {
       icon: FaServer,
@@ -47,7 +63,7 @@ export default function Achievements() {
       color: "from-green-500 to-emerald-500",
       iconColor: "text-green-400",
       description: "Maintained across all critical services",
-      trend: "+0.5%"
+      trend: "+0.5%",
     },
     {
       icon: FaClock,
@@ -55,8 +71,8 @@ export default function Achievements() {
       label: "Faster Deployments",
       color: "from-purple-500 to-pink-500",
       iconColor: "text-purple-400",
-      description: "Reduced from 2 hours to 36 minutes",
-      trend: "+70%"
+      description: "Reduced from 2 hours to 48 minutes",
+      trend: "+50%",
     },
     {
       icon: FaDollarSign,
@@ -64,8 +80,8 @@ export default function Achievements() {
       label: "Cost Reduction",
       color: "from-orange-500 to-red-500",
       iconColor: "text-orange-400",
-      description: "Annual infrastructure savings of $200K+",
-      trend: "-40%"
+      description: "Annual infrastructure savings of $100K+",
+      trend: "-30%",
     },
   ];
 
@@ -73,38 +89,46 @@ export default function Achievements() {
     {
       icon: FaTrophy,
       title: "Led Cloud Migration",
-      description: "Successfully migrated 50+ microservices to Kubernetes with zero downtime",
-      impact: "Improved scalability by 300%",
-      color: "from-yellow-500 to-orange-500"
+      description:
+        "Successfully migrated 10+ microservices to Kubernetes with zero downtime",
+      impact: "Improved scalability by 70%",
+      color: "from-yellow-500 to-orange-500",
     },
     {
       icon: FaFire,
       title: "Automated CI/CD Pipeline",
-      description: "Built end-to-end automation reducing manual intervention by 90%",
-      impact: "Saved 200+ hours monthly",
-      color: "from-red-500 to-pink-500"
+      description:
+        "Built end-to-end automation reducing manual intervention by 60%",
+      impact: "Saved 100+ hours monthly",
+      color: "from-red-500 to-pink-500",
     },
     {
       icon: FaShieldAlt,
       title: "Enhanced Security Posture",
       description: "Implemented security scanning and compliance automation",
-      impact: "Zero security incidents in 2 years",
-      color: "from-blue-500 to-purple-500"
+      impact: "Zero security incidents in 0.5 years",
+      color: "from-blue-500 to-purple-500",
     },
     {
       icon: FaUsers,
       title: "Team Leadership",
-      description: "Mentored 5 junior engineers and established DevOps best practices",
-      impact: "Improved team velocity by 60%",
-      color: "from-green-500 to-teal-500"
-    }
+      description:
+        "Mentored 5 junior engineers and established DevOps best practices",
+      impact: "Improved team velocity by 40%",
+      color: "from-green-500 to-teal-500",
+    },
   ];
 
   const additionalMetrics = [
-    { label: "Infrastructure as Code", value: "100%", max: 100 },
-    { label: "Test Coverage", value: "85%", max: 100 },
-    { label: "Automation Rate", value: "92%", max: 100 },
-    { label: "Incident Response Time", value: "< 5min", max: 100, current: 95 }
+    { label: "Infrastructure as Code", value: "80%", max: 100 },
+    { label: "Test Coverage", value: "65%", max: 100 },
+    { label: "Automation Rate", value: "72%", max: 100 },
+    {
+      label: "Incident Response Time",
+      value: "< 15min",
+      max: 100,
+      current: 95,
+    },
   ];
 
   return (
@@ -119,8 +143,12 @@ export default function Achievements() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 text-shimmer">Impact & Achievements</h2>
-          <p className="text-gray-400 text-lg">Measurable results and proven track record</p>
+          <h2 className="text-5xl font-bold mb-4 text-shimmer">
+            Impact & Achievements
+          </h2>
+          <p className="text-gray-400 text-lg">
+            Measurable results and proven track record
+          </p>
         </motion.div>
 
         {/* Main Metrics Grid */}
@@ -138,11 +166,15 @@ export default function Achievements() {
                 className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition group relative overflow-hidden"
               >
                 {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-linear-to-br ${metric.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
+                <div
+                  className={`absolute inset-0 bg-linear-to-br ${metric.color} opacity-0 group-hover:opacity-10 transition-opacity`}
+                ></div>
 
                 {/* Trend badge */}
                 <div className="absolute top-4 right-4 px-2 py-1 bg-green-500/20 border border-green-500/30 rounded-full">
-                  <span className="text-xs text-green-400 font-bold">{metric.trend}</span>
+                  <span className="text-xs text-green-400 font-bold">
+                    {metric.trend}
+                  </span>
                 </div>
 
                 <div className="relative z-10">
@@ -158,13 +190,19 @@ export default function Achievements() {
                   </motion.div>
 
                   {/* Value */}
-                  <div className="text-4xl font-bold text-white mb-2">{metric.value}</div>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {metric.value}
+                  </div>
 
                   {/* Label */}
-                  <div className="text-sm font-semibold text-gray-300 mb-2">{metric.label}</div>
+                  <div className="text-sm font-semibold text-gray-300 mb-2">
+                    {metric.label}
+                  </div>
 
                   {/* Description */}
-                  <div className="text-xs text-gray-500">{metric.description}</div>
+                  <div className="text-xs text-gray-500">
+                    {metric.description}
+                  </div>
                 </div>
               </motion.div>
             );
@@ -178,7 +216,9 @@ export default function Achievements() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-bold text-white mb-8 text-center">Key Achievements</h3>
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">
+            Key Achievements
+          </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {achievements.map((achievement, index) => {
               const Icon = achievement.icon;
@@ -193,17 +233,25 @@ export default function Achievements() {
                   className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition"
                 >
                   <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-lg bg-linear-to-br ${achievement.color} p-0.5 shrink-0`}>
+                    <div
+                      className={`w-12 h-12 rounded-lg bg-linear-to-br ${achievement.color} p-0.5 shrink-0`}
+                    >
                       <div className="w-full h-full bg-black rounded-lg flex items-center justify-center">
                         <Icon className="text-xl text-white" />
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg font-bold text-white mb-2">{achievement.title}</h4>
-                      <p className="text-sm text-gray-400 mb-3">{achievement.description}</p>
+                      <h4 className="text-lg font-bold text-white mb-2">
+                        {achievement.title}
+                      </h4>
+                      <p className="text-sm text-gray-400 mb-3">
+                        {achievement.description}
+                      </p>
                       <div className="flex items-center gap-2">
                         <FaChartLine className="text-green-400" />
-                        <span className="text-sm text-green-400 font-semibold">{achievement.impact}</span>
+                        <span className="text-sm text-green-400 font-semibold">
+                          {achievement.impact}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -220,7 +268,9 @@ export default function Achievements() {
           viewport={{ once: true }}
           className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8"
         >
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Performance Metrics</h3>
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            Performance Metrics
+          </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {additionalMetrics.map((metric, index) => (
               <motion.div
@@ -231,13 +281,19 @@ export default function Achievements() {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-gray-300 font-medium">{metric.label}</span>
-                  <span className="text-sm text-white font-bold">{metric.value}</span>
+                  <span className="text-sm text-gray-300 font-medium">
+                    {metric.label}
+                  </span>
+                  <span className="text-sm text-white font-bold">
+                    {metric.value}
+                  </span>
                 </div>
                 <div className="w-full bg-white/10 rounded-full h-3 overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
-                    whileInView={{ width: `${metric.current || parseInt(metric.value)}%` }}
+                    whileInView={{
+                      width: `${metric.current || parseInt(metric.value)}%`,
+                    }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 + 0.3, duration: 1 }}
                     className="h-full bg-linear-to-r from-blue-500 to-purple-600 rounded-full"
@@ -257,7 +313,9 @@ export default function Achievements() {
         >
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full">
             <FaAward className="text-2xl text-yellow-400" />
-            <span className="text-white font-semibold">Top Performer Award 2024</span>
+            <span className="text-white font-semibold">
+              Top Performer Award 2024
+            </span>
           </div>
         </motion.div>
       </div>
