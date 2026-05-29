@@ -6,8 +6,8 @@ on:
       - main
     paths:
       - 'index.html'
-      - 'style.css'
-      - 'script.js'
+      - 'assets/css/style.css'
+      - 'assets/js/scripts.js'
       - 'assets/**'
 
 permissions:
@@ -37,6 +37,5 @@ jobs:
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v5
-
 
 

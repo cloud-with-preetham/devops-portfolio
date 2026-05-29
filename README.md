@@ -1,6 +1,6 @@
 # Preetham Pereira — Portfolio
 
-Personal portfolio website for Preetham Pereira, an aspiring DevOps Engineer.
+Personal portfolio website for Preetham Pereira, a Cloud/DevOps Engineer.
 
 ## Live Site
 
