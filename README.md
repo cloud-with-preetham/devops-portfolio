@@ -4,7 +4,7 @@ Personal portfolio website for Preetham Pereira, an aspiring DevOps Engineer.
 
 ## Live Site
 
-[portfolio.cloud-with-preetham.liveblog365.com](https://portfolio.cloud-with-preetham.liveblog365.com)
+[cloud-with-preetham.github.io/devops-portfolio/](https://cloud-with-preetham.github.io/devops-portfolio/)
 
 ## Stack
 
