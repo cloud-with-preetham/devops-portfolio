@@ -4,8 +4,7 @@ Personal portfolio website for Preetham Pereira, a Cloud/DevOps Engineer.
 
 ## Live Site
 
-[cloud-with-preetham.github.io/devops-portfolio/](https://cloud-with-preetham.github.io/devops-portfolio/)
-
+[portfolio.cloudwithpreetham.in](https://portfolio.cloudwithpreetham.in/)
 ## Stack
 
 - HTML, CSS, JavaScript (vanilla)
